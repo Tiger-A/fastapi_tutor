@@ -59,11 +59,29 @@ if __name__ == "__main__":
     uvicorn.run("main:app", reload=True)
 
 
+#  python -m venv myvenv       
 # myvenv/scripts/activate    
-# pip install fastapi[standart] 
+
+# python3.11 -m venv .venv - где .venv - заданное вами имя создаваемого окружения
+# source .venv/bin/activate
+# pip install --upgrade pip
+#  Возможны 2 случая: 1 - используя командную строку; 2- из ранее созданного файла с версиями пакетов ( requirements.txt)
+#      Случай 1:
+#     pip install "fastapi[all]"  - после выполнения данной команды установите следующий пакет
+#     Случай 2:
+#     pip install -r requirements.txt - установит разом все пакеты из указанного txt файла
+# Шаг 5. Сохраните версии пакетов если в шаге 4 был случай 1
+# pip freeze -> requirements.txt
+# Если в процессе работы над проектом потребуется установка каки-либо пакетов, то повторите шаг 4 случай 1, а затем шаг 5. 
+# Шаг 6. Выход из вирт. окружения (после завершения работы над проектом) командой
+# deactivate
+
+# pip install fastapi[all] 
+# pip install uvicorn[standard]
 # http://127.0.0.1:8000/docs#
 # http://127.0.0.1:8000/redoc#
 
+#  python main.py
 
 # git push -u origin master
 # git remote add origin https://github.com/tiger-a/fastapi_tutor.git
